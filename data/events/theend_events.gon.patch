@@ -1,16 +1,6 @@
 BallOfCancer {
-    intro {
-        title "EVENT_BALLOFCANCER_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame ball_of_cancer
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_BALLOFCANCER_QUES"
-
-        options {
+        options.overwrite {
             eat {
                 label "EVENT_EAT_ANSW"
                 stat con
@@ -83,18 +73,8 @@ BallOfCancer {
 }
 
 MysteriousBuilding {
-    intro {
-        title "EVENT_MYSTERIOUSBUILDING_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame mysterious_building
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_MYSTERIOUSBUILDING_QUES"
-
-        options {
+        options.overwrite {
             enter {
                 label "EVENT_ENTER_ANSW"
                 stat none
@@ -129,18 +109,8 @@ MysteriousBuilding {
 }
 
 CrackInTheEarth {
-    intro {
-        title "EVENT_CRACKINTHEEARTH_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame crack_in_the_earth
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_CRACKINTHEEARTH_QUES"
-
-        options {
+        options.overwrite {
             inspect {
                 label "EVENT_INSPECT_ANSW"
                 stat int

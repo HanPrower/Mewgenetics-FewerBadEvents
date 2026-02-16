@@ -1,16 +1,6 @@
 DyingFetus {
-    intro {
-        title "EVENT_DYINGFETUS_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame dying_fetus
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_DYINGFETUS_QUES"
-
-        options {
+         options.overwrite {
             comfort {
                 label "EVENT_COMFORT_ANSW"
                 stat cha
@@ -74,18 +64,8 @@ DyingFetus {
 }
 
 StuckCorpse {
-    intro {
-        title "EVENT_STUCKCORPSE_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame stuck_corpse
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_STUCKCORPSE_QUES"
-
-        options {
+        options.overwrite {
             loot {
                 label "EVENT_LOOT_ANSW"
                 stat lck
@@ -129,18 +109,8 @@ StuckCorpse {
 }
 
 SomethingWhisperingFromTheDarkness {
-    intro {
-        title "EVENT_SOMETHINGWHISPERING_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame whispering_from_darkness
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_SOMETHINGWHISPERING_QUES"
-
-        options {
+        options.overwrite {
             keep_going {
                 label "EVENT_KEEPGOING_ANSW"
 
@@ -187,65 +157,8 @@ SomethingWhisperingFromTheDarkness {
 }
 
 CrackInTheWall {
-    intro {
-        title "EVENT_CRACKINTHEWALL_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        choose_cat_with_item_slot_equipped weapon
-        subject_frame crack_in_the_wall
-        event_clip NonWheelEvent
-    }
-
     main {
-        setup {
-            conditional_reward {
-                requirements {
-                    counter_maximum [WorldEventLegacyCounter_CrackInTheWall 0]
-                }
-                reward {
-                    prompt "EVENT_CRACKINTHEWALL_QUES"
-                    set_frame 1
-                }
-            }
-            conditional_reward {
-                requirements {
-                    counter_range [WorldEventLegacyCounter_CrackInTheWall 1 1]
-                }
-                reward {
-                    prompt "EVENT_CRACKINTHEWALL_QUES2"
-                    set_frame 2
-                }
-            }
-            conditional_reward {
-                requirements {
-                    counter_range [WorldEventLegacyCounter_CrackInTheWall 2 2]
-                }
-                reward {
-                    prompt "EVENT_CRACKINTHEWALL_QUES2"
-                    set_frame 3
-                }
-            }
-            conditional_reward {
-                requirements {
-                    counter_range [WorldEventLegacyCounter_CrackInTheWall 3 3]
-                }
-                reward {
-                    prompt "EVENT_CRACKINTHEWALL_QUES2"
-                    set_frame 4
-                }
-            }
-            conditional_reward {
-                requirements {
-                    counter_minimum [WorldEventLegacyCounter_CrackInTheWall 4]
-                }
-                reward {
-                    prompt "EVENT_CRACKINTHEWALL_QUES3"
-                    set_frame 5
-                }
-            }
-        }
-
-        options {
+        options.overwrite {
             use_weapon {
                 label "EVENT_USE_WEAPON_ANSW"
                 
@@ -403,18 +316,8 @@ CrackInTheWall {
 }
 
 LeakingMeat {
-    intro {
-        title "EVENT_LEAKINGMEAT_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame meat_leaking
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_LEAKINGMEAT_QUES"
-
-        options {
+        options.overwrite {
             eat_meat {
                 label "EVENT_LEAKINGMEAT_EAT_ANSW"
                 stat con

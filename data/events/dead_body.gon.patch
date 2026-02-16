@@ -1,16 +1,6 @@
 DeadRat {
-    intro {
-        title "EVENT_DEADRAT_NAME"
-        cat_choice random //choose, random, none (random and none are equivalent)
-        subject_clip EventSubject
-        subject_frame deadrat
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_DEADRAT_QUES"
-
-        options {
+        options.overwrite {
             destroy {
                 label "EVENT_DESTROY_ANSW"
                 stat str
@@ -98,18 +88,8 @@ DeadRat {
 }
 
 DeadCat {
-    intro {
-        title "EVENT_DEADCAT_NAME"
-        cat_choice random //choose, random, none (random and none are equivalent)
-        subject_clip EventSubject
-        subject_frame deadcat
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_DEADCAT_QUES"
-
-        options {
+        options.overwrite {
             eat {
                 label "EVENT_EAT_ANSW"
                 stat con
@@ -181,18 +161,8 @@ DeadCat {
 }
 
 BonePile {
-    intro {
-        title "EVENT_BONEPILE_NAME"
-        cat_choice random //choose, random, none (random and none are equivalent)
-        subject_clip EventSubject
-        subject_frame bonepile
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_BONEPILE_QUES"
-
-        options {
+        options.overwrite {
             examine {
                 label "EVENT_EXAMINE_ANSW"
                 stat int
@@ -255,18 +225,8 @@ BonePile {
 }
 
 GutPile {
-    intro {
-        title "EVENT_GUTPILE_NAME"
-        cat_choice random //choose, random, none (random and none are equivalent)
-        subject_clip EventSubject
-        subject_frame gutspile
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_GUTPILE_QUES"
-
-        options {
+        options.overwrite {
             eat {
                 label "EVENT_EAT_ANSW"
                 stat con
@@ -339,18 +299,8 @@ GutPile {
 }
 
 SeveredHead {
-    intro {
-        title "EVENT_SEVEREDHEAD_NAME"
-        cat_choice random //choose, random, none (random and none are equivalent)
-        subject_clip EventSubject
-        subject_frame severedhead
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_SEVEREDHEAD_QUES"
-
-        options {
+        options.overwrite {
             examine {
                 label "EVENT_EXAMINE_ANSW"
                 stat int
@@ -411,18 +361,8 @@ SeveredHead {
 }
 
 CatPelts {
-    intro {
-        title "EVENT_PILEOFCATPELTS_NAME"
-        cat_choice random //choose, random, none (random and none are equivalent)
-        subject_clip EventSubject
-        subject_frame catpelts
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_PILEOFCATPELTS_QUES"
-
-        options {
+        options.overwrite {
             examine {
                 label "EVENT_EXAMINE_ANSW"
                 stat int
@@ -495,18 +435,8 @@ CatPelts {
 }
 
 Stain {
-    intro {
-        title "EVENT_MYSTERIOUSSTAIN_NAME"
-        cat_choice random //choose, random, none (random and none are equivalent)
-        subject_clip EventSubject
-        subject_frame mysteriousstain
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_MYSTERIOUSSTAIN_QUES"
-
-        options {
+        options.overwrite {
             lick {
                 label "EVENT_LICK_ANSW"
                 stat con
@@ -571,18 +501,8 @@ Stain {
 }
 
 DecayingCarcass {
-    intro {
-        title "EVENT_DECAYINGCARCASS_NAME"
-        cat_choice random //choose, random, none (random and none are equivalent)
-        subject_clip EventSubject
-        subject_frame decaying_carcass
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_DECAYINGCARCASS_QUES"
-
-        options {
+        options.overwrite {
             eat {
                 label "EVENT_EAT_ANSW"
                 stat con
@@ -651,18 +571,8 @@ DecayingCarcass {
 }
 
 APoop {
-    intro {
-        title "EVENT_APOOP_NAME"
-        cat_choice random //choose, random, none (random and none are equivalent)
-        subject_clip EventSubject
-        subject_frame a_poop
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_APOOP_QUES"
-
-        options {
+        options.overwrite {
             destroy {
                 label "EVENT_DESTROY_ANSW"
                 stat str
@@ -725,18 +635,8 @@ APoop {
 }
 
 ALargePoop { 
-    intro {
-        title "EVENT_ALARGEPOOP_NAME"
-        cat_choice random //choose, random, none (random and none are equivalent)
-        subject_clip EventSubject
-        subject_frame a_large_poop
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_ALARGEPOOP_QUES"
-
-        options {
+        options.overwrite {
             destroy {
                 label "EVENT_DESTROY_ANSW"
                 stat str
@@ -805,18 +705,8 @@ ALargePoop {
 }
 
 AMegaHugePoop {
-    intro {
-        title "EVENT_AMEGAHUGEPOOP_NAME"
-        cat_choice random //choose, random, none (random and none are equivalent)
-        subject_clip EventSubject
-        subject_frame a_mega_large_poop
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_AMEGAHUGEPOOP_QUES"
-
-        options {
+        options.overwrite {
             destroy {
                 label "EVENT_DESTROY_ANSW"
                 stat str
@@ -899,18 +789,8 @@ AMegaHugePoop {
 }
 
 MummifiedCorpse {
-    intro {
-        title "EVENT_MUMMIFIEDCORPSE_NAME"
-        cat_choice random //choose, random, none (random and none are equivalent)
-        subject_clip EventSubject
-        subject_frame mummified_corpse
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_MUMMIFIEDCORPSE_QUES"
-
-        options {
+        options.overwrite {
             destroy {
                 label "EVENT_DESTROY_ANSW"
                 stat str
@@ -981,18 +861,8 @@ MummifiedCorpse {
 }
 
 Fetus {
-    intro {
-        title "EVENT_FETUS_NAME"
-        cat_choice random //choose, random, none (random and none are equivalent)
-        subject_clip EventSubject
-        subject_frame fetus
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_FETUS_QUES"
-
-        options {
+        options.overwrite {
             eat {
                 label "EVENT_EAT_ANSW"
                 stat con
@@ -1054,45 +924,8 @@ Fetus {
 }
 
 BloodStain {
-    intro {
-        title "EVENT_BLOODSTAIN_NAME"
-        cat_choice random //choose, random, none (random and none are equivalent)
-        subject_clip EventSubject
-        subject_frame blood_stain
-        event_clip NonWheelEvent
-    }
-
     main {
-        setup {
-            conditional_reward {
-                requirements {
-                    is_not_chapter [future theend]
-                }
-                reward {
-                    prompt "EVENT_BLOODSTAIN_QUES"
-                }
-            }
-            
-            conditional_reward {
-                requirements {
-                    is_chapter [future]
-                }
-                reward {
-                    prompt "EVENT_BLOODSTAIN_ALT_FUTURE_QUES"
-                }
-            }
-
-            conditional_reward {
-                requirements {
-                    is_chapter [theend]
-                }
-                reward {
-                    prompt "EVENT_BLOODSTAIN_ALT_THEEND_QUES"
-                }
-            }
-        }
-
-        options {
+        options.overwrite {
             lick {
                 label "EVENT_LICK_ANSW"
                 stat con
@@ -1156,18 +989,8 @@ BloodStain {
 }
 
 RottenMeat {
-    intro {
-        title "EVENT_ROTTENMEAT_NAME"
-        cat_choice random //choose, random, none (random and none are equivalent)
-        subject_clip EventSubject
-        subject_frame rotten_meat
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_ROTTENMEAT_QUES"
-
-        options {
+        options.overwrite {
             eat {
                 label "EVENT_EAT_ANSW"
                 stat con
@@ -1242,18 +1065,8 @@ RottenMeat {
 }
 
 OminousSign {
-    intro {
-        title "EVENT_OMINOUSSIGN_NAME"
-        cat_choice random //choose, random, none (random and none are equivalent)
-        subject_clip EventSubject
-        subject_frame ominous_sign
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_OMINOUSSIGN_QUES"
-
-        options {
+        options.overwrite {
             destroy {
                 label "EVENT_DESTROY_ANSW"
                 stat str
@@ -1263,7 +1076,7 @@ OminousSign {
                     reward {
                         common {
                             prompt "EVENT_OMINOUSSIGN_REW1"
-                            self_status_next_fight{
+                            self_status_next_fight {
                                 DivineShield 2
                             }
                         }
@@ -1319,18 +1132,8 @@ OminousSign {
 }
 
 StrangeFlowers {
-    intro {
-        title "EVENT_STRANGEFLOWERS_NAME"
-        cat_choice random //choose, random, none (random and none are equivalent)
-        subject_clip EventSubject
-        subject_frame strange_flowers
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_STRANGEFLOWERS_QUES"
-
-        options {
+        options.overwrite {
             eat {
                 label "EVENT_EAT_ANSW"
                 stat con
@@ -1396,18 +1199,8 @@ StrangeFlowers {
 }
 
 Mushroom {
-    intro {
-        title "EVENT_MUSHROOM_NAME"
-        cat_choice random //choose, random, none (random and none are equivalent)
-        subject_clip EventSubject
-        subject_frame mushroom
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_MUSHROOM_QUES"
-
-        options {
+        options.overwrite {
             eat {
                 label "EVENT_EAT_ANSW"
                 stat con
@@ -1483,18 +1276,8 @@ Mushroom {
 }
 
 SmellyBag {
-    intro {
-        title "EVENT_SMELLYBAG_NAME"
-        cat_choice random //choose, random, none (random and none are equivalent)
-        subject_clip EventSubject
-        subject_frame smelly_bag
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_SMELLYBAG_QUES"
-
-        options {
+        options.overwrite {
             examine {
                 label "EVENT_EXAMINE_ANSW"
                 stat int
@@ -1617,18 +1400,8 @@ SmellyBag {
 }
 
 ASmallPileOfStones {
-    intro {
-        title "EVENT_ASMALLPILEOFSTONES_NAME"
-        cat_choice random //choose, random, none (random and none are equivalent)
-        subject_clip EventSubject
-        subject_frame a_small_pile_of_stones
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_ASMALLPILEOFSTONES_QUES"
-
-        options {
+        options.overwrite {
             eat {
                 label "EVENT_EAT_ANSW"
                 stat con
@@ -1697,18 +1470,8 @@ ASmallPileOfStones {
 }
 
 FruitBasket {
-    intro {
-        title "EVENT_FRUITBASKET_NAME"
-        cat_choice random //choose, random, none (random and none are equivalent)
-        subject_clip EventSubject
-        subject_frame fruit_basket
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_FRUITBASKET_QUES"
-
-        options {
+        options.overwrite {
             eat {
                 label "EVENT_EAT_ANSW"
                 stat con
@@ -1774,18 +1537,8 @@ FruitBasket {
 }
 
 HumanSkin {
-    intro {
-        title "EVENT_HUMANSKIN_NAME"
-        cat_choice random //choose, random, none (random and none are equivalent)
-        subject_clip EventSubject
-        subject_frame human_skin
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_HUMANSKIN_QUES"
-
-        options {
+        options.overwrite {
             eat {
                 label "EVENT_EAT_ANSW"
                 stat con
@@ -1857,18 +1610,8 @@ HumanSkin {
 }
 
 BottleOfViperBooze {
-    intro {
-        title "EVENT_BOTTLEOFVIPERBOOZE_NAME"
-        cat_choice random //choose, random, none (random and none are equivalent)
-        subject_clip EventSubject
-        subject_frame bottle_of_viper_booze
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_BOTTLEOFVIPERBOOZE_QUES"
-
-        options {
+        options.overwrite {
             drink {
                 label "EVENT_DRINK_ANSW"
                 stat con
@@ -1925,18 +1668,8 @@ BottleOfViperBooze {
 }
 
 Hairball {
-    intro {
-        title "EVENT_HAIRBALL_NAME"
-        cat_choice random //choose, random, none (random and none are equivalent)
-        subject_clip EventSubject
-        subject_frame hairball
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_HAIRBALL_QUES"
-
-        options {
+        options.overwrite {
             eat {
                 label "EVENT_EAT_ANSW"
                 stat con
@@ -1992,18 +1725,8 @@ Hairball {
 }
 
 TallGrass {
-    intro {
-        title "EVENT_TALLGRASS_NAME"
-        cat_choice random //choose, random, none (random and none are equivalent)
-        subject_clip EventSubject
-        subject_frame tall_grass
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_TALLGRASS_QUES"
-
-        options {
+        options.overwrite {
             destroy {
                 label "EVENT_DESTROY_ANSW"
                 stat str
@@ -2080,7 +1803,7 @@ TallGrass {
                         rare {
                             prompt "EVENT_TALLGRASS_REW10"
                             get_item_from_pool grass_items
-							get_item_from_pool grass_items
+                            get_item_from_pool grass_items
                         }
                     }
                 }
@@ -2090,18 +1813,8 @@ TallGrass {
 }
 
 Fountain {
-    intro {
-        title "EVENT_FOUNTAIN_NAME"
-        cat_choice random //choose, random, none (random and none are equivalent)
-        subject_clip EventSubject
-        subject_frame fountain
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_FOUNTAIN_QUES"
-
-        options {
+        options.overwrite {
             drink {
                 label "EVENT_DRINK_ANSW"
                 stat con

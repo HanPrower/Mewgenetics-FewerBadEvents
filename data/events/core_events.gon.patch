@@ -1,17 +1,6 @@
 DemonicIdol {
-    intro {
-        title "EVENT_DEMONICIDOL_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame demonic_idol
-        choose_cat_with_min_health 75%
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_DEMONICIDOL_QUES"
-
-        options { 
+        options.overwrite { 
             damage_1 {
                 label "EVENT_DEMONICIDOL_1DAMAGE_ANSW"
                 stat con
@@ -128,18 +117,8 @@ DemonicIdol {
 }
 
 JaggedPathway {
-    intro {
-        title "EVENT_JAGGEDPATHWAY_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame jagged_pathway
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_JAGGEDPATHWAY_QUES"
-
-        options {
+        options.overwrite {
             push_through {
                 label "EVENT_JAGEDPATHWAY_ANSW_PUSH"
                 stat str
@@ -186,29 +165,8 @@ JaggedPathway {
 }
 
 MysteriousStranger {
-    intro {
-        title "EVENT_MYSTERIOUSSTRANGER_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame mysterious_stranger
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_MYSTERIOUSSTRANGER_QUES"
-        
-        setup {
-            conditional_reward {
-                requirements {
-                    has_token HasPlayedMysteriousStranger
-                }
-                reward {
-                    prompt "EVENT_MYSTERIOUSSTRANGER_QUES2"
-                }
-            }
-        }
-
-        options {
+        options.overwrite {
             play {
                 label "EVENT_MYSTERIOUSSTRANGER_ANSW"
                 stat spd

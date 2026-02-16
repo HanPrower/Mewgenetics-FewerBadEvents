@@ -1,16 +1,6 @@
 Butch1 {
-    intro {
-        title "EVENT_BUTCH_NAME"
-        cat_choice random //choose, random, none (random and none are equivalent)
-        subject_clip EventSubject
-        subject_frame butch
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_BUTCH_QUES"
-
-        options {
+        options.overwrite {
             damage {
                 label "EVENT_DAMAGE_ANSW"
                 stat none
@@ -67,18 +57,8 @@ Butch1 {
 }
 
 Butch2 {
-    intro {
-        title "EVENT_BUTCH_NAME"
-        cat_choice random //choose, random, none (random and none are equivalent)
-        subject_clip EventSubject
-        subject_frame butch
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_BUTCH2_QUES"
-
-        options {
+        options.overwrite {
             surprise {
                 label "EVENT_SURPRISE_ANSW"
                 stat none
@@ -131,18 +111,8 @@ Butch2 {
 }
 
 Butch3 {
-    intro {
-        title "EVENT_BUTCH_NAME"
-        cat_choice random //choose, random, none (random and none are equivalent)
-        subject_clip EventSubject
-        subject_frame butch
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_BUTCH3_QUES"
-
-        options {
+        options.overwrite {
             damage {
                 label "EVENT_SCABS_ANSW"
                 stat none
@@ -197,18 +167,8 @@ Butch3 {
 }
 
 Beanies1 {
-    intro {
-        title "EVENT_DRBEANIES_NAME"
-        cat_choice random //choose, random, none (random and none are equivalent)
-        subject_clip EventSubject
-        subject_frame beanies
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_DRBEANIES_QUES"
-
-        options {
+        options.overwrite {
             red {
                 label "EVENT_RED_ANSW"
                 stat none
@@ -260,18 +220,8 @@ Beanies1 {
 }
 
 Beanies2 {
-    intro {
-        title "EVENT_DRBEANIES_NAME"
-        cat_choice random //choose, random, none (random and none are equivalent)
-        subject_clip EventSubject
-        subject_frame beanies
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_DRBEANIES2_QUES"
-
-        options {
+        options.overwrite {
             lever {
                 label "EVENT_PULLLEVER_ANSW"
                 stat none
@@ -318,18 +268,8 @@ Beanies2 {
 
 
 Frank1 {
-    intro {
-        title "EVENT_FRANK_NAME"
-        cat_choice random //choose, random, none (random and none are equivalent)
-        subject_clip EventSubject
-        subject_frame frank
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_FRANK_QUES"
-
-        options {
+        options.overwrite {
             boogers {
                 label "EVENT_BOOGERS_ANSW"
                 stat none
@@ -379,18 +319,8 @@ Frank1 {
 }
 
 Frank2 {
-    intro {
-        title "EVENT_FRANK_NAME"
-        cat_choice random //choose, random, none (random and none are equivalent)
-        subject_clip EventSubject
-        subject_frame frank
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_FRANK2_QUES"
-
-        options {
+        options.overwrite {
             boogers {
                 label "EVENT_BEEPIS_ANSW"
                 stat none
@@ -440,18 +370,8 @@ Frank2 {
 }
 
 Tink1 {
-    intro {
-        title "EVENT_TINK_NAME"
-        cat_choice random //choose, random, none (random and none are equivalent)
-        subject_clip EventSubject
-        subject_frame tink
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_TINK_QUES"
-
-        options {
+        options.overwrite {
             tappytoes {
                 label "EVENT_TAPPYTOES_ANSW"
                 stat none
@@ -506,18 +426,8 @@ Tink1 {
 }
 
 Tink2 {
-    intro {
-        title "EVENT_TINK_NAME"
-        cat_choice random //choose, random, none (random and none are equivalent)
-        subject_clip EventSubject
-        subject_frame tink
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_TINK2_QUES"
-
-        options {
+        options.overwrite {
             makeup {
                 label "EVENT_MAKEUP_ANSW"
                 stat none
@@ -572,18 +482,8 @@ Tink2 {
 }
 
 Tracy1 {
-    intro {
-        title "EVENT_TRACY_NAME"
-        cat_choice random //choose, random, none (random and none are equivalent)
-        subject_clip EventSubject
-        subject_frame tracy
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_TRACY_QUES"
-
-        options {
+        options.overwrite {
             buy1 {
                 label "EVENT_BUY_ANSW"
                 stat coins
@@ -774,18 +674,8 @@ Tracy1 {
 }
 
 OrganGrinder1 {
-    intro {
-        title "EVENT_ORGANGRINDER_NAME"
-        cat_choice random //choose, random, none (random and none are equivalent)
-        subject_clip EventSubject
-        subject_frame organgrinder
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_ORGANGRINDER_QUES"
-
-        options {
+        options.overwrite {
             itchies {
                 label "EVENT_ITCHIES_ANSW"
                 stat none
@@ -835,18 +725,8 @@ OrganGrinder1 {
 }
 
 Jack {
-    intro {
-        title "EVENT_JACK_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame jack
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_JACK_QUES"
-
-        options {
+        options.overwrite {
             donate_5 {
                 label "EVENT_DONATE_ANSW"
                 stat coins
@@ -1198,47 +1078,8 @@ Jack {
 }
 
 StevenFetus {
-    intro {
-        title "EVENT_STEVENFETUS_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame steven_fetus
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_STEVENFETUS_QUES"
-        setup {
-            conditional_reward {
-                requirements {
-                    has_token AdventureToken_StevenTryAgain
-                    not_has_token AdventureToken_StevenTryAgain2
-                }
-                reward {
-                    prompt "EVENT_STEVENFETUS_QUES2"
-                }
-            }
-            conditional_reward {
-                requirements {
-                    has_token AdventureToken_StevenTryAgain2
-                    not_has_token AdventureToken_StevenTryAgain3
-
-                }
-                reward {
-                    prompt "EVENT_STEVENFETUS_QUES3"
-                }
-            }
-            conditional_reward {
-                requirements {
-                    has_token AdventureToken_StevenTryAgain3
-                }
-                reward {
-                    prompt "EVENT_STEVENFETUS_QUES4"
-                }
-            }
-        }
-
-        options {
+        options.overwrite {
             investigate {
                 label "EVENT_INVESTIGATE_ANSW"
                 stat int
@@ -1340,18 +1181,8 @@ StevenFetus {
 }
 
 DarkDen {
-    intro {
-        title "EVENT_DARKDEN_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame dark_den
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_DARKDEN_QUES"
-
-        options {
+        options.overwrite {
             investigate {
                 label "EVENT_INVESTIGATE_ANSW"
                 stat int
@@ -1366,15 +1197,21 @@ DarkDen {
                         rare {
                             set_frame 3
                             prompt "EVENT_DARKDEN_REW2"
-							mutation {
+                            mutation {
                                 legs 322
-							}
+                            }
                         }
                     }
                 }
-                bad {
+            }
+            
+            fight {
+                label "EVENT_FIGHT_ANSW"
+                stat none
+            
+                good {
                     reward {
-                        common {
+                       common {
                             set_frame 4
                             prompt "EVENT_DARKDEN_REW3"
                             spawn_unit_next_fight {
@@ -1407,18 +1244,8 @@ DarkDen {
 }
 
 WhiteRabbit {
-    intro {
-        title "EVENT_WHITERABBIT_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame white_rabbit
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_WHITERABBIT_QUES"
-
-        options {
+        options.overwrite {
             charm {
                 label "EVENT_CHARM_ANSW"
                 stat cha
@@ -1434,15 +1261,6 @@ WhiteRabbit {
                             set_frame 3
                             prompt "EVENT_WHITERABBIT_REW2"
                             gain_familiar CharmedWhiteRabbit
-                        }
-                    }
-                }
-                bad {
-                    reward {
-                        common {
-                            set_frame 7
-                            prompt "EVENT_WHITERABBIT_REW4" 
-                            battle "events/WhiteRabbit.lvl"
                         }
                     }
                 }
@@ -1467,11 +1285,17 @@ WhiteRabbit {
                         }
                     }
                 }
-                bad {
+            }
+            
+            fight {
+                label "EVENT_FIGHT_ANSW"
+                stat none
+            
+                good {
                     reward {
                         common {
                             set_frame 7
-                            prompt "EVENT_WHITERABBIT_REW8" 
+                            prompt "EVENT_WHITERABBIT_REW4" 
                             battle "events/WhiteRabbit.lvl"
                         }
                     }
@@ -1493,24 +1317,8 @@ WhiteRabbit {
 }
 
 MysteriousMachine {
-    requirements {
-        //Several of the unique rewards from the crit events only make sense with 2+ cats.
-        minimum_party_size 2
-        not_on_quest 1 //the copy cat / clone item results are quite bad to get if you're on an item quest
-    }
-
-    intro {
-        title "EVENT_MYSTERIOUSMACHINE_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame mysterious_machine
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_MYSTERIOUSMACHINE_QUES"
-
-        options {
+        options.overwrite {
             turnon {
                 label "EVENT_MYSTERIOUSMACHINE_TURNITON_ANSW"
                 stat int
@@ -1547,19 +1355,8 @@ MysteriousMachine {
 }
 
 BodyOfGlorg {
-    intro {
-        title "EVENT_BODYOFGLORG_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame body_of_glorg
-        choose_cat_with_parasite true
-        event_clip NonWheelEvent
-    }
-       
     main {
-        prompt "EVENT_BODYOFGLORG_QUES"
-
-        options {
+        options.overwrite {
             give_parasite {
                 label "EVENT_BODYOFGLORG_PARASITE_ANSW"
                 requirements {

@@ -1,16 +1,6 @@
 MysteriousCave {
-    intro {
-        title "EVENT_MYSTERIOUSCAVE_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame mysterious_cave
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_MYSTERIOUSCAVE_QUES"
-
-        options {
+        options.overwrite {
             enter {
                 label "EVENT_ENTER_ANSW"
                 stat con
@@ -26,24 +16,6 @@ MysteriousCave {
                             prompt "EVENT_MYSTERIOUSCAVE_REW2"
                             set_adventure_token AdventureToken_MysteriousCave_FamiliarVoice
                             event_now_same_cat MysteriousCave1
-                        }
-                    }
-                }
-                bad {
-                    set_frame 3
-                    reward {
-                        common {
-                            prompt "EVENT_MYSTERIOUSCAVE_REW3"
-                            self_status_next_fight {
-                                Fear 1
-                            }
-                        }
-                        rare {
-                            prompt "EVENT_MYSTERIOUSCAVE_REW4" 
-                            self_status_next_fight {
-                                Fear 1
-                            }
-                            gain_disorder_from_pool mental_disorders
                         }
                     }
                 }
@@ -64,18 +36,8 @@ MysteriousCave {
 }
 
 TarPits {
-    intro {
-        title "EVENT_TARPITS_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame tar_pits
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_TARPITS_QUES"
-
-        options {
+        options.overwrite {
             cross {
                 label "EVENT_CROSS_ANSW"
 
@@ -91,24 +53,6 @@ TarPits {
                             prompt "EVENT_TARPITS_REW2"
                             gain_familiar CharmedTarBaby
                             gain_familiar CharmedTarBaby
-                        }
-                    }
-                }
-                bad {
-                    set_frame 3
-                    reward {
-                        common {
-                            prompt "EVENT_TARPITS_REW3"
-                            self_status_next_fight {
-                                Tarred 1
-                            }
-                        }
-                        rare {
-                            prompt "EVENT_TARPITS_REW4" 
-                            ambush_next_basic_fights 1
-                            party_status_next_fight {
-                                Tarred 1
-                            }
                         }
                     }
                 }
@@ -131,38 +75,14 @@ TarPits {
                         }
                     }
                 }
-                bad {
-                    set_frame 5
-                    reward {
-                        common {
-                            prompt "EVENT_TARPITS_REW7"
-                            event_now_same_cat random
-                        }
-                        rare {
-                            prompt "EVENT_TARPITS_REW8" 
-                            next_event_bonus -2
-                            event_now_same_cat random
-                        }
-                    }
-                }
             }
         }
     }
 }
 
 NestOfEggs {
-    intro {
-        title "EVENT_NESTOFEGGS_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame nest_of_eggs
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_NESTOFEGGS_QUES"
-
-        options {
+        options.overwrite {
             eat {
                 label "EVENT_EAT_ANSW"
                 stat con
@@ -183,24 +103,6 @@ NestOfEggs {
                             party_status_next_fight {
                                 HealthRegenUp 2
                             }
-                        }
-                    }
-                }
-                bad {
-                    set_frame 3
-                    reward {
-                        common {
-                            prompt "EVENT_NESTOFEGGS_REW3"
-                            party_status_next_fight {
-                                Poison 2
-                            }
-                        }
-                        rare {
-                            prompt "EVENT_NESTOFEGGS_REW4" 
-                            self_status_next_fight {
-                                Poison 2
-                            }
-                            learn_ability BarfBall
                         }
                     }
                 }
@@ -225,25 +127,6 @@ NestOfEggs {
                         }
                     }
                 }
-                bad {
-                    set_frame 6
-                    reward {
-                        common {
-                            prompt "EVENT_NESTOFEGGS_REW7"
-                            damage 5
-                            self_status_next_fight {
-                                Bleed 3
-                            }
-                        }
-                        rare {
-                            prompt "EVENT_NESTOFEGGS_REW8" 
-                            party_damage 5
-                            party_status_next_fight {
-                                Bleed 3
-                            }
-                        }
-                    }
-                }
             }
 
             kiss {
@@ -263,20 +146,6 @@ NestOfEggs {
                             gain_familiar CharmedRaptorBaby
                             gain_familiar CharmedRaptorBaby
                         }
-                    }
-                }
-                bad {
-                    set_frame 7
-                    reward {
-                        common {
-                            prompt "EVENT_NESTOFEGGS_REW11"
-                            injury cha
-                        }
-                        rare {
-                            prompt "EVENT_NESTOFEGGS_REW12" 
-                            damage 10
-                            gain_disorder PuncturedEye
-                        }   
                     }
                 }
             }

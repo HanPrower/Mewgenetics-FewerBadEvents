@@ -1,21 +1,6 @@
 MonkeyPaw1 {
-    requirements {
-        not_has_token WorldEventLegacyToken_MonkeyPaw1
-    }
-
-    intro {
-        title "EVENT_MONKEYPAW_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame monkey_paw_4fingers
-        set_frame 1
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_MONKEYPAW1_QUES"
-
-        options {
+        options.overwrite {
             examine {
                 label "EVENT_EXAMINE_ANSW"
                 stat int
@@ -51,23 +36,8 @@ MonkeyPaw1 {
 }
 
 MonkeyPaw2 {
-    requirements {
-        has_token WorldEventLegacyToken_MonkeyPaw1
-        not_has_token WorldEventLegacyToken_MonkeyPaw2
-    }
-
-    intro {
-        title "EVENT_MONKEYPAW_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame monkey_paw_3fingers
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_MONKEYPAW2_QUES"
-
-        options {
+        options.overwrite {
             examine {
                 label "EVENT_EXAMINE_ANSW"
                 stat int
@@ -103,21 +73,8 @@ MonkeyPaw2 {
 }
 
 MonkeyPaw3 {
-    requirements {
-        has_token WorldEventLegacyToken_MonkeyPaw2
-        not_has_token WorldEventLegacyToken_MonkeyPaw3
-    }
-    intro {
-        title "EVENT_MONKEYPAW_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame monkey_paw_2fingers //event states have different base frames.
-        event_clip NonWheelEvent
-    }
     main {
-        prompt "EVENT_MONKEYPAW3_QUES"
-
-        options {
+        options.overwrite {
             examine {
                 label "EVENT_EXAMINE_ANSW"
                 stat int
@@ -153,21 +110,8 @@ MonkeyPaw3 {
 }
 
 MonkeyPaw4 {
-    requirements {
-        has_token WorldEventLegacyToken_MonkeyPaw3
-        not_has_token WorldEventLegacyToken_MonkeyPaw4
-    }
-    intro {
-        title "EVENT_MONKEYPAW_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame monkey_paw_1finger //event states have different base frames.
-        event_clip NonWheelEvent
-    }
     main {
-        prompt "EVENT_MONKEYPAW3_QUES"
-
-        options {
+        options.overwrite {
             examine {
                 label "EVENT_EXAMINE_ANSW"
                 stat int
@@ -203,24 +147,8 @@ MonkeyPaw4 {
 }
 
 MeatGolem {
-    requirements {
-        has_token WorldEventLegacyToken_CryptOpened
-    }
-
-    intro {
-        title "EVENT_MEATGOLEM_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame meat_golem
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_MEATGOLEM_QUES"
-        shuffle_options true
-        max_options 2
-
-        options {
+        options.overwrite {
             smash {
                 label "EVENT_GOLEMSMASH_ANSW"
                 stat none

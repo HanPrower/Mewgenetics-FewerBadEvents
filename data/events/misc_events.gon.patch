@@ -1,21 +1,6 @@
 CatHole {
-    requirements { //wont show up on quests or on 1-cat runs since the cat dissapearing can be BAD in those cases
-        minimum_party_size 2
-        not_on_quest 1
-    }
-
-    intro {
-        title "EVENT_CATSHAPEDHOLE_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame cathole
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_CATSHAPEDHOLE_QUES"
-
-        options {
+        options.overwrite {
             concheck {
                 label "EVENT_GETINTHEHOLE_ANSW"
                 stat con
@@ -140,18 +125,8 @@ CatHole {
 }
 
 TallFence {
-    intro {
-        title "EVENT_TALLFENCE_NAME"
-        cat_choice random //choose, random, none (random and none are equivalent)
-        subject_clip EventSubject
-        subject_frame tallfence
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_TALLFENCE_QUES"
-
-        options {
+        options.overwrite {
             climb {
                 label "EVENT_CLIMB_ANSW"
                 stat dex
@@ -207,18 +182,8 @@ TallFence {
 }
 
 MouseTrap {
-    intro {
-        title "EVENT_BAITEDMOUSETRAP_NAME"
-        cat_choice random //choose, random, none (random and none are equivalent)
-        subject_clip EventSubject
-        subject_frame mousetrap
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_BAITEDMOUSETRAP_QUES"
-
-        options {
+        options.overwrite {
             examine {
                 label "EVENT_EXAMINE_ANSW"
                 stat int
@@ -232,16 +197,16 @@ MouseTrap {
                         rare {
                             set_frame 2
                             prompt "EVENT_BAITEDMOUSETRAP_REW2"
-								random_pool [
-								{
-									weight 10
-									get_item_from_pool food
-								}
-								{
-									weight 4
-									get_item HeadCheese
-								}
-							]
+                            random_pool [
+                                {
+                                    weight 10
+                                    get_item_from_pool food
+                                }
+                                {
+                                    weight 4
+                                    get_item HeadCheese
+                                }
+                            ]
                         }
                     }
                 }
@@ -261,18 +226,8 @@ MouseTrap {
 }
 
 CatOrgy {
-    intro {
-        title "EVENT_CATSINHEAT_NAME"
-        cat_choice random //choose, random, none (random and none are equivalent)
-        subject_clip EventSubject
-        subject_frame catorgy
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_CATSINHEAT_QUES"
-
-        options {
+        options.overwrite {
             sneak {
                 label "EVENT_SNEAKBY_ANSW"
                 stat dex
@@ -353,18 +308,8 @@ CatOrgy {
 }
 
 WatchingEyeballs {
-    intro {
-        title "EVENT_WATCHINGEYEBALLS_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame watchingeyeballs
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_WATCHINGEYEBALLS_QUES"
-
-        options {
+        options.overwrite {
             sneak {
                 label "EVENT_SNEAKBY_ANSW"
                 stat dex
@@ -428,18 +373,8 @@ WatchingEyeballs {
 }
 
 SpiderWebs {
-    intro {
-        title "EVENT_SPIDERWEBS_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame spiderwebs
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_SPIDERWEBS_QUES"
-
-        options {
+        options.overwrite {
             sneak {
                 label "EVENT_SNEAKBY_ANSW"
                 stat dex
@@ -474,18 +409,8 @@ SpiderWebs {
 }
 
 Mirror {
-    intro {
-        title "EVENT_STRANGEMIRROR_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame mirror
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_STRANGEMIRROR_QUES"
-
-        options {
+        options.overwrite {
             investigate {
                 label "EVENT_INVESTIGATE_ANSW"
                 stat int
@@ -552,18 +477,8 @@ Mirror {
 }
 
 LockedDoor {
-    intro {
-        title "EVENT_LOCKEDDOOR_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame lockeddoor
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_LOCKEDDOOR_QUES"
-
-        options {
+        options.overwrite {
             examine {
                 label "EVENT_EXAMINE_ANSW"
                 stat int
@@ -621,18 +536,8 @@ LockedDoor {
 }
 
 SmallBird {
-    intro {
-        title "EVENT_SMALLBIRD_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame small_bird
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_SMALLBIRD_QUES"
-
-        options {
+        options.overwrite {
             catch {
                 label "EVENT_CATCH_ANSW"
                 stat spd
@@ -700,18 +605,8 @@ SmallBird {
 }
 
 StrongCurrent {
-    intro {
-        title "EVENT_STRONGCURRENT_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame strong_current
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_STRONGCURRENT_QUES"
-
-        options {
+        options.overwrite {
             swim {
                 label "EVENT_SWIM_ANSW"
                 stat str
@@ -774,18 +669,8 @@ StrongCurrent {
 }
 
 BearTrap {
-    intro {
-        title "EVENT_BEARTRAP_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame bear_trap
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_BEARTRAP_QUES"
-
-        options {
+        options.overwrite {
             disarm {
                 label "EVENT_DISARM_ANSW"
                 stat dex
@@ -828,18 +713,8 @@ BearTrap {
 }
 
 Baphomet {
-    intro {
-        title "EVENT_BAPHOMET_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame baphomet
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_BAPHOMET_QUES"
-
-        options {
+        options.overwrite {
             damage {
                 label "EVENT_BAHPHOMET_HEALTH_ANSW"
 
@@ -905,18 +780,8 @@ Baphomet {
 }
 
 ABeggar {
-    intro {
-        title "EVENT_ABEGGAR_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame a_beggar
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_ABEGGAR_QUES"
-
-        options {
+        options.overwrite {
             5coins {
                 label "EVENT_BEGGAR_5_ANSW"
                 stat coins
@@ -1079,18 +944,8 @@ ABeggar {
 }
 
 CatBed {
-    intro {
-        title "EVENT_CATBED_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame cat_bed
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_CATBED_QUES"
-
-        options {
+        options.overwrite {
             rest {
                 label "EVENT_REST_ANSW"
                 stat lck
@@ -1138,22 +993,8 @@ CatBed {
 }
 
 TapeRecorder {
-    requirements {
-        not_has_token WorldEventLegacyToken_TapeRecorderDestroyed
-    }
-
-    intro {
-        title "EVENT_TAPERECORDER_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame tape_recorder
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_TAPERECORDER_QUES"
-
-        options {
+        options.overwrite {
             listen {
                 label "EVENT_LISTEN_ANSW"
                 stat int
@@ -1213,18 +1054,8 @@ TapeRecorder {
 }
 
 HoleInTheEarth {
-    intro {
-        title "EVENT_HOLEINTHEEARTH_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame hole_in_the_earth
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_HOLEINTHEEARTH_QUES"
-
-        options {
+        options.overwrite {
             enter {
                 label "EVENT_HOLEINTHEEARTH_ENTER_ANSW"
                 stat lck
@@ -1287,18 +1118,8 @@ HoleInTheEarth {
 }
 
 WrithingPileOfMaggots {
-    intro {
-        title "EVENT_WRITHINGPILEOFMAGGOTS_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame writhing_pile_of_maggots
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_WRITHINGPILEOFMAGGOTS_QUES"
-
-        options {
+        options.overwrite {
             examine {
                 label "EVENT_EXAMINE_ANSW"
                 stat int
@@ -1349,7 +1170,7 @@ WrithingPileOfMaggots {
                             prompt "EVENT_WRITHINGPILEOFMAGGOTS_REW7"
                             gain_familiar CharmedMaggot
                             gain_familiar CharmedMaggot
-							gain_familiar CharmedMaggot
+                            gain_familiar CharmedMaggot
                         }
                         rare {
                             prompt "EVENT_WRITHINGPILEOFMAGGOTS_REW8"
@@ -1358,7 +1179,7 @@ WrithingPileOfMaggots {
                             gain_familiar CharmedMaggot
                             gain_familiar CharmedMaggot
                             gain_familiar CharmedMaggot
-							gain_familiar CharmedMaggot
+                            gain_familiar CharmedMaggot
                             gain_familiar CharmedMaggot
                             gain_familiar CharmedMaggot
                         }
@@ -1370,18 +1191,8 @@ WrithingPileOfMaggots {
 }
 
 DustStorm {
-    intro {
-        title "EVENT_DUSTSTORM_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame dust_storm
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_DUSTSTORM_QUES"
-
-        options {
+        options.overwrite {
             talk_to {
                 label "EVENT_TALKTO_ANSW"
                 stat cha
@@ -1446,18 +1257,8 @@ DustStorm {
 }
 
 VibratingMeteor {
-    intro {
-        title "EVENT_VIBRATINGMETEOR_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame vibrating_meteor
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_VIBRATINGMETEOR_QUES"
-
-        options {
+        options.overwrite {
             take {
                 label "EVENT_TAKE_ANSW"
                 stat con
@@ -1494,37 +1295,8 @@ VibratingMeteor {
 }
 
 Death {
-    requirements {
-        cat_has_injury_count_min 2
-    }
-
-    intro {
-        title "EVENT_DEATH_NAME"
-        cat_choice random
-        choose_cat_with_most_injuries true
-        subject_clip EventSubject
-        subject_frame death
-        event_clip NonWheelEvent
-    }
-
     main {        
-        setup {
-            conditional_reward {
-                requirements {
-                    has_token AdventureToken_HasRunFromDeath
-                }
-
-                reward {
-                    prompt "EVENT_DEATH_QUES2"
-                }
-
-                else {
-                    prompt "EVENT_DEATH_QUES"
-                }
-            }
-        }
-
-        options {
+        options.overwrite {
             sweet_talk {
                 label "EVENT_DEATH_SWEETTALK_ANSW"
                 stat cha

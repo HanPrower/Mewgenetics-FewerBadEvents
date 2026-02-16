@@ -1,16 +1,6 @@
 CrashedObject {
-    intro {
-        title "EVENT_CRASHEDOBJECT_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame crashed_object
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_CRASHEDOBJECT_QUES"
-
-        options {
+        options.overwrite {
             loot {
                 label "EVENT_LOOT_ANSW"
                 stat dex
@@ -132,18 +122,8 @@ CrashedObject {
 }
 
 MysteriousObelisk {
-    intro {
-        title "EVENT_MYSTERIOUSOBELISK_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame mysterious_obelisk
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_MYSTERIOUSOBELISK_QUES"
-
-        options {
+        options.overwrite {
             touch {
                 label "EVENT_MYSTERIOUSOBELISK_TOUCH_ANSW"
                 stat cha
@@ -208,18 +188,8 @@ MysteriousObelisk {
 }
 
 SmallBlackHole {
-    intro {
-        title "EVENT_SMALLBLACKHOLE_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame small_black_hole
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_SMALLBLACKHOLE_QUES"
-
-        options {
+        options.overwrite {
             reach_inside {
                 label "EVENT_SMALLBLACKHOLE_REACHINSIDE_ANSW"
                 stat spd

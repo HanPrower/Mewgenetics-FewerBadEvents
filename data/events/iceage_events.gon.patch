@@ -1,16 +1,6 @@
 FrozenHumanoid {
-    intro {
-        title "EVENT_FROZENHUMANOID_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame frozen_humanoid
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_FROZENHUMANOID_QUES"
-
-        options {
+        options.overwrite {
             break_ice {
                 label "EVENT_FROZENHUMANOID_BREAKICE_ANSW"
 
@@ -48,18 +38,8 @@ FrozenHumanoid {
 }
 
 DeadMammoth {
-    intro {
-        title "EVENT_DEADMAMMOTH_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame dead_mammoth
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_DEADMAMMOTH_QUES"
-
-        options {
+        options.overwrite {
             eat {
                 label "EVENT_EAT_ANSW"
                 stat con
@@ -133,18 +113,8 @@ DeadMammoth {
 }
 
 MysteriousTent {
-    intro {
-        title "EVENT_MYSTERIOUSTENT_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame mysterious_tent
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_MYSTERIOUSTENT_QUES"
-
-        options {
+        options.overwrite {
             enter {
                 label "EVENT_ENTER_ANSW"
 

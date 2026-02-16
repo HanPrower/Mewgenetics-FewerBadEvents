@@ -1,0 +1,24 @@
+Tragedy {
+    main {
+        outcome {
+            random_pool.overwrite [
+                { 
+                    set_frame 1 
+                    prompt "EVENT_TRAGEDY_REW1" 
+                }
+                { 
+                    set_frame 2
+                    prompt "EVENT_TRAGEDY_REW2" 
+                }
+                { 
+                    set_frame 3
+                    prompt "EVENT_TRAGEDY_REW3" 
+                }
+                { 
+                    set_frame 4
+                    prompt "EVENT_TRAGEDY_REW4" 
+                }
+            ]
+        }
+    }
+}

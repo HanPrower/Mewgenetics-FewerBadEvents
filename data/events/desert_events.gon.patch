@@ -1,16 +1,6 @@
 Mirage {
-    intro {
-        title "EVENT_MIRAGE_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame mirage
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_MIRAGE_QUES"
-
-        options {
+        options.overwrite {
             inspect {
                 label "EVENT_INSPECT_ANSW"
                 stat int
@@ -176,18 +166,8 @@ Mirage {
 }
 
 Oasis {
-    intro {
-        title "EVENT_OASIS_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame oasis
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_OASIS_QUES"
-
-        options {
+        options.overwrite {
             drink {
                 label "EVENT_DRINK_ANSW"
                 stat lck
@@ -222,18 +202,8 @@ Oasis {
 }
 
 MysteriousTomb {
-    intro {
-        title "EVENT_MYSTERIOUSTOMB_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame mysterious_tomb_door
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_MYSTERIOUSTOMB_QUES"
-
-        options {
+        options.overwrite {
             smash {
                 label "EVENT_MYSTERIOUSTOMB_ANSW"
                 stat str
@@ -266,4 +236,4 @@ MysteriousTomb {
             }
         }
     }
-} //the rest of the continuing events are in sequence_event_continuations.gon
+}

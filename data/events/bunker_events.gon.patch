@@ -1,16 +1,6 @@
 LockedCrate {
-    intro {
-        title "EVENT_LOCKEDCRATE_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame locked_crate
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_LOCKEDCRATE_QUES"
-
-        options {
+        options.overwrite {
             break_lock{
                 label "EVENT_LOCKEDCRATE_BREAK_ANSW"
                 stat str
@@ -55,19 +45,9 @@ LockedCrate {
 }
 
 MysteriousManual {
-    intro {
-        title "EVENT_MYSTERIOUSMANUAL_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame mysterious_manual
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_MYSTERIOUSMANUAL_QUES"
-
-        options {
-            read{
+        options.overwrite {
+            read {
                 label "EVENT_READ_ANSW"
                 stat int
 
@@ -102,18 +82,8 @@ MysteriousManual {
 }
 
 ElephantsFoot {
-    intro {
-        title "EVENT_ELEPHANTSFOOT_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame eliphants_foot
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_ELEPHANTSFOOT_QUES"
-
-        options {
+        options.overwrite {
             move_closer {
                 label "EVENT_ELEPHANTSFOOT_ANSW"
                 stat str

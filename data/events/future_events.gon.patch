@@ -1,16 +1,6 @@
 VendingMachine {
-    intro {
-        title "EVENT_VENDINGMACHINE_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame vending_machine
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_VENDINGMACHINE_QUES"
-
-        options {
+        options.overwrite {
             put_in_coins {
                 label "EVENT_VENDINGMACHINE_COINS_ANSW"
                 stat coins
@@ -71,7 +61,7 @@ VendingMachine {
                             get_item_from_pool chapter_common
                             get_item_from_pool consumables
                             get_item_from_pool tech_items
-							get_item_from_pool tech_items
+                            get_item_from_pool tech_items
                         }
                     }
                 }
@@ -92,18 +82,8 @@ VendingMachine {
 }
 
 ComputerConsole {
-    intro {
-        title "EVENT_COMPUTERCONSOLE_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame computer_console
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_COMPUTERCONSOLE_QUES"
-
-        options {
+        options.overwrite {
             hack {
                 label "EVENT_HACK_ANSW"
                 stat int
@@ -178,18 +158,8 @@ ComputerConsole {
 }
 
 MysteriousChamber {
-    intro {
-        title "EVENT_MYSTERIOUSCHAMBER_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame mysterious_chamber
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_MYSTERIOUSCHAMBER_QUES"
-
-        options {
+        options.overwrite {
             upgrade_yourself {
                 label "EVENT_MYSTERIOUSCHAMBER_UPGRADE_ANSW"
                 stat lck

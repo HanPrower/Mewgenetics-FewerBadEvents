@@ -1,19 +1,6 @@
-//these events cannot be triggered naturally, and only occur when other events trigger them!
-
 Genie_Good {
-    intro {
-        title "EVENT_GENIEOFTHELAMP_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame genie
-        subject_frame_inner 2
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_GENIEOFTHELAMP_QUES"
-
-        options {
+        options.overwrite {
             wealth {
                 label EVENT_GENIE_CHOICE_WEALTH
                 stat none
@@ -58,12 +45,12 @@ Genie_Good {
                         rare {
                             prompt "EVENT_GENIEOFTHELAMP_REW4"
                             gain_disorder Gigachad
-							permanent_stats {
+                            permanent_stats {
                                 cha 3
                             }
-							mutation {
+                            mutation {
                                 head 305
-							}
+                            }
                         }
                     }
                 }
@@ -96,102 +83,9 @@ Genie_Good {
     }
 }
 
-Genie_Bad {
-    intro {
-        title "EVENT_GENIEOFTHELAMP_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame genie
-        subject_frame_inner 4
-        event_clip NonWheelEvent
-    }
-
-    main {
-        prompt "EVENT_GENIEOFTHELAMP2_QUES"
-
-        //TODO: Consider making it unable to curse you if you are too dumb (int<=0) because
-        //  you need to clearly articulate your preference for him to act.
-
-        options {
-            mind {
-                label EVENT_GENIE_CHOICE_CURSEMIND
-                stat none
-
-                bad {
-                    reward {
-                        common {
-                            prompt "EVENT_GENIEOFTHELAMP2_REW1"
-                            gain_disorder_from_pool mental_disorders
-                        }
-                        rare {
-                            prompt "EVENT_GENIEOFTHELAMP2_REW2"
-                            gain_disorder_from_pool mental_disorders
-                            permanent_stats {
-                                int -3
-                            }
-                        }
-                    }
-                }
-            }
-
-            body {
-                label EVENT_GENIE_CHOICE_CURSEBODY
-                stat none
-
-                bad {
-                    reward {
-                        common {
-                            prompt "EVENT_GENIEOFTHELAMP2_REW3"
-                            gain_disorder_from_pool physical_disorders
-                        }
-                        rare {
-                            prompt "EVENT_GENIEOFTHELAMP2_REW4"
-                            gain_disorder_from_pool physical_disorders
-                            permanent_stats {
-                                con -3
-                            }
-                        }
-                    }
-                }
-            }
-
-            soul {
-                label EVENT_GENIE_CHOICE_CURSESOUL
-                stat none
-
-                bad {
-                    reward {
-                        common {
-                            prompt "EVENT_GENIEOFTHELAMP2_REW5"
-                            get_parasite_from_pool parasites 
-                        }
-                        rare {
-                            prompt "EVENT_GENIEOFTHELAMP2_REW6"
-                            get_parasite_from_pool parasites 
-                            permanent_stats {
-                                lck -3
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-
 WatchingHead2 {
-    intro {
-        title "EVENT_WATCHINGHEAD2_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame watching_head
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_WATCHINGHEAD2_QUES"
-
-        options {
+        options.overwrite {
             fight {
                 label "EVENT_FIGHT_ANSW"
                 stat str
@@ -207,59 +101,8 @@ WatchingHead2 {
 }
 
 MonkeyPawWish {
-    intro {
-        title "EVENT_MONKEYPAWWISH_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame monkey_paw_4fingers
-        subject_frame_inner 2 //This event is called when a finger moves down, requiring 2nd frame.
-        event_clip NonWheelEvent
-    }
-
     main {
-        setup {
-            conditional_reward {
-                requirements {
-                    has_token WorldEventLegacyToken_MonkeyPaw1
-                    not_has_token WorldEventLegacyToken_MonkeyPaw2
-                }
-                reward {
-                    set_subject monkey_paw_4fingers
-                    set_frame 2
-                }
-            }
-            conditional_reward {
-                requirements {
-                    has_token WorldEventLegacyToken_MonkeyPaw2
-                    not_has_token WorldEventLegacyToken_MonkeyPaw3
-                }
-                reward {
-                    set_subject monkey_paw_3fingers
-                    set_frame 2
-                }
-            }
-            conditional_reward {
-                requirements {
-                    has_token WorldEventLegacyToken_MonkeyPaw3
-                }
-                reward {
-                    set_subject monkey_paw_2fingers
-                    set_frame 2
-                }
-            }
-            conditional_reward {
-                requirements {
-                    has_token WorldEventLegacyToken_MonkeyPaw4
-                }
-                reward {
-                    set_subject monkey_paw_1finger
-                    set_frame 2
-                }
-            }
-        }
-        prompt "EVENT_MONKEYPAWWISH_QUES"
-
-        options {
+        options.overwrite {
             wish_strength {
                 requirements {
                     not_has_token WorldEventLegacyToken_MonkeyPawStrength
@@ -363,18 +206,8 @@ MonkeyPawWish {
 }
 
 MysteriousTomb1 {
-    intro {
-        title "EVENT_MYSTERIOUSTOMB_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame mysterious_tomb_stairs
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_MYSTERIOUSTOMB1_QUES"
-
-        options {
+        options.overwrite {
             smash {
                 label "EVENT_MYSTERIOUSTOMB1_ANSW"
                 stat dex
@@ -406,18 +239,8 @@ MysteriousTomb1 {
 }
 
 MysteriousTomb2 {
-    intro {
-        title "EVENT_MYSTERIOUSTOMB_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame mysterious_tomb_enter
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_MYSTERIOUSTOMB2_QUES"
-
-        options {
+        options.overwrite {
             smash {
                 label "EVENT_MYSTERIOUSTOMB2_ANSW"
                 stat con
@@ -440,16 +263,6 @@ MysteriousTomb2 {
                         }
                     }
                 }
-                bad {
-                    reward {
-                        common {
-                            set_frame 3
-                            prompt "EVENT_MYSTERIOUSTOMB2_REW3"
-                            override_end_option_prompt "EVENT_MYSTERIOUSTOMB2_END_RETREAT"
-                            event_now_same_cat MysteriousTomb1 //go back a room
-                        }
-                    }
-                }
             }
 
             leave {
@@ -468,18 +281,8 @@ MysteriousTomb2 {
 
 
 MysteriousTomb3 {
-    intro {
-        title "EVENT_MYSTERIOUSTOMB_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame mysterious_tomb_sarcophagus
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_MYSTERIOUSTOMB3_QUES"
-
-        options {
+        options.overwrite {
             smash {
                 label "EVENT_MYSTERIOUSTOMB3_ANSW"
                 stat lck
@@ -495,16 +298,6 @@ MysteriousTomb3 {
                         rare {
                             prompt "EVENT_MYSTERIOUSTOMB3_REW2"
                             get_item EyeOfRa
-                        }
-                    }
-                }
-                bad {
-                    reward {
-                        common {
-                            set_frame 3
-                            prompt "EVENT_MYSTERIOUSTOMB3_REW3"
-                            override_end_option_prompt "EVENT_MYSTERIOUSTOMB3_END_MUMMY"
-                            event_now_same_cat MysteriousTomb4 //go to next floor
                         }
                     }
                 }
@@ -525,18 +318,8 @@ MysteriousTomb3 {
 }
 
 MysteriousTomb4 {
-    intro {
-        title "EVENT_MYSTERIOUSTOMB_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame mysterious_tomb_mummy
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_MYSTERIOUSTOMB4_QUES"
-
-        options {
+        options.overwrite {
             smash {
                 label "EVENT_MYSTERIOUSTOMB4_ANSW"
                 stat int
@@ -560,18 +343,8 @@ MysteriousTomb4 {
 }
 
 ElephantsFootCloser {
-    intro {
-        title "EVENT_ELEPHANTSFOOTCLOSER_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame eliphants_foot_closer
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_ELEPHANTSFOOTCLOSER_QUES"
-
-        options {
+         options.overwrite {
             move_closer {
                 label "EVENT_ELEPHANTSFOOTCLOSER_ANSW"
                 stat str
@@ -613,18 +386,8 @@ ElephantsFootCloser {
 }
 
 ElephantsFootEvenCloser {
-    intro {
-        title "EVENT_ELEPHANTSFOOTEVENCLOSER_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame eliphants_foot_closer
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_ELEPHANTSFOOTEVENCLOSER_QUES"
-
-        options {
+        options.overwrite {
             withstand {
                 label "EVENT_ELEPHANTSFOOTEVENCLOSER_ANSW"
                 stat con
@@ -666,18 +429,7 @@ ElephantsFootEvenCloser {
 }
 
 MysteriousStrangerForced {
-    //This is the same event but with no leave option.
-    intro {
-        title "EVENT_MYSTERIOUSSTRANGER_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame mysterious_stranger
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_MYSTERIOUSSTRANGER_QUES"
-        
         setup {
             conditional_reward {
                 requirements {
@@ -689,7 +441,7 @@ MysteriousStrangerForced {
             }
         }
 
-        options {
+        options.overwrite {
             play {
                 label "EVENT_MYSTERIOUSSTRANGER_ANSW"
                 stat spd
@@ -721,18 +473,8 @@ MysteriousStrangerForced {
 }
 
 JaggedPathwayStalactite {
-    intro {
-        title "EVENT_JAGGEDPATHWAY_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame jagged_pathway
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_JAGGEDPATHWAY_STALACTITE_QUES"
-
-        options {
+        options.overwrite {
             pull_it_out {
                 label "EVENT_JAGGEDPATHWAY_STALACTITE_ANSW1"
                 stat none
@@ -769,18 +511,8 @@ JaggedPathwayStalactite {
 }
 
 MysteriousCave1 { //repell
-    intro {
-        title "EVENT_MYSTERIOUSCAVE1_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame mysterious_cave_hole
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_MYSTERIOUSCAVE1_QUES"
-
-        options {
+        options.overwrite {
             repell {
                 label "EVENT_MYSTERIOUSCAVE1_RAPPEL_ANSW"
                 stat dex
@@ -833,19 +565,9 @@ MysteriousCave1 { //repell
     }
 }
 
-MysteriousCave2 { //glowing one
-    intro {
-        title "EVENT_MYSTERIOUSCAVE2_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame mysterious_cave_glowing_one
-        event_clip NonWheelEvent
-    }
-
+MysteriousCave2 {
     main {
-        prompt "EVENT_MYSTERIOUSCAVE2_QUES"
-
-        options {
+        options.overwrite {
             repell {
                 label "EVENT_MYSTERIOUSCAVE1_TALKTO_ANSW"
                 stat cha
@@ -875,18 +597,8 @@ MysteriousCave2 { //glowing one
 }
 
 MysteriousCave3 { //climb out
-    intro {
-        title "EVENT_MYSTERIOUSCAVE2_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame mysterious_cave_climb
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_MYSTERIOUSCAVE3_QUES"
-
-        options {
+        options.overwrite {
             repell {
                 label "EVENT_MYSTERIOUSCAVE3_CLIMB_ANSW"
                 stat str
@@ -912,22 +624,8 @@ MysteriousCave3 { //climb out
 }
 
 MysteriousMachine_Good {
-    intro {
-        title "EVENT_MYSTERIOUSMACHINE_GOOD_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame mysterious_machine
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_MYSTERIOUSMACHINE_GOOD_QUES"
-
-        setup {
-            set_frame 4
-        }
-
-        options {
+        options.overwrite {
             copy {
                 label "EVENT_MYSTERIOUSMACHINE_COPY_ANSW"
 
@@ -964,22 +662,8 @@ MysteriousMachine_Good {
 }
 
 MysteriousMachine_Bad {
-    intro {
-        title "EVENT_MYSTERIOUSMACHINE_BAD_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame mysterious_machine
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_MYSTERIOUSMACHINE_BAD_QUES"
-
-        setup {
-            set_frame 4
-        }
-
-        options {
+        options.overwrite {
             copy {
                 label "EVENT_MYSTERIOUSMACHINE_COPY_ANSW"
 
@@ -1016,22 +700,8 @@ MysteriousMachine_Bad {
 }
 
 BodyOfGlorg_Gift {
-    intro {
-        title "EVENT_GIFTOFGLORG_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame body_of_glorg
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_GIFTOFGLORG_QUES"
-
-        setup{
-            set_frame 4
-        }
-
-        options {
+        options.overwrite {
             head {
                 label "EVENT_GIFTOFGLORG_HEAD_ANSW"
 

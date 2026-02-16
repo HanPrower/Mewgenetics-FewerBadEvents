@@ -1,16 +1,6 @@
 Crate {
-    intro {
-        title "EVENT_CRATE_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame crate
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_CRATE_QUES"
-
-        options {
+        options.overwrite {
             smash {
                 label "EVENT_SMASH_ANSW"
                 stat str
@@ -69,18 +59,8 @@ Crate {
 }
 
 Dumpster {
-    intro {
-        title "EVENT_LOCKEDDUMPSTER_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame dumpster
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_LOCKEDDUMPSTER_QUES"
-
-        options {
+        options.overwrite {
             examine {
                 label "EVENT_EXAMINE_ANSW"
                 stat int
@@ -137,18 +117,8 @@ Dumpster {
 }
 
 Safe {
-    intro {
-        title "EVENT_SAFE_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame safe
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_SAFE_QUES"
-
-        options {
+        options.overwrite {
             examine {
                 label "EVENT_EXAMINE_ANSW"
                 stat int
@@ -200,18 +170,8 @@ Safe {
 }
 
 Bottle {
-    intro {
-        title "EVENT_BOTTLEOFUNKNOWNLIQUID_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame bottleofliquid
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_BOTTLEOFUNKNOWNLIQUID_QUES"
-
-        options {
+        options.overwrite {
             drink {
                 label EVENT_DRINK_ANSW
                 stat con
@@ -249,10 +209,10 @@ Bottle {
                             prompt "EVENT_BOTTLEOFUNKNOWNLIQUID_REW3"
                             get_item Bottles
                             get_item Bottles
-							get_item Bottles
                             get_item Bottles
                             get_item Bottles
-							get_item Bottles
+                            get_item Bottles
+                            get_item Bottles
                         }
                     }
                 }
@@ -273,29 +233,8 @@ Bottle {
 }
 
 Pinata {
-    intro {
-        title "EVENT_SOMEKINDOFPINATA_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame pinata
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_SOMEKINDOFPINATA_QUES"
-        setup {
-            conditional_reward {
-                requirements {
-                    has_token HasHitPinata
-                }
-
-                reward {
-                    prompt "EVENT_SOMEKINDOFPINATA_QUES2"
-                }
-            }
-        }
-
-        options {
+        options.overwrite {
             smash {
                 label "EVENT_SMASH_ANSW"
                 stat str
@@ -354,18 +293,8 @@ Pinata {
 }
 
 GenieLamp {
-    intro {
-        title "EVENT_ANODDLAMP_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame genie
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_ANODDLAMP_QUES"
-
-        options {
+        options.overwrite {
             rub {
                 label "EVENT_RUB_ANSW"
                 stat lck
@@ -403,18 +332,8 @@ GenieLamp {
 }
 
 ToxicWaste {
-    intro {
-        title "EVENT_AVATOFTOXICWASTE_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame toxicwastevat
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_AVATOFTOXICWASTE_QUES"
-
-        options {
+        options.overwrite {
             sneak {
                 label "EVENT_GOAROUND_ANSW"
                 stat dex
@@ -508,18 +427,8 @@ ToxicWaste {
 }
 
 WomansPurse {
-    intro {
-        title "EVENT_WOMANSPURSE_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame womans_purse
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_WOMANSPURSE_QUES"
-
-        options {
+        options.overwrite {
             open {
                 label "EVENT_OPEN_ANSW"
                 stat lck
@@ -587,18 +496,8 @@ WomansPurse {
 }
 
 OldCan {
-    intro {
-        title "EVENT_OLDCAN_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame old_can
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_OLDCAN_QUES"
-
-        options {
+        options.overwrite {
             drink {
                 label "EVENT_DRINK_ANSW"
                 stat con
@@ -656,18 +555,8 @@ OldCan {
 }
 
 ARock {
-    intro {
-        title "EVENT_AROCK_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame a_rock
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_AROCK_QUES"
-
-        options {
+        options.overwrite {
             smash {
                 label "EVENT_SMASH_ANSW"
                 stat str
@@ -718,18 +607,8 @@ ARock {
 }
 
 HollowSkull { 
-    intro {
-        title "EVENT_HOLLOWSKULL_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame hollow_skull
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_HOLLOWSKULL_QUES"
-
-        options {
+        options.overwrite {
             smash {
                 label "EVENT_SMASH_ANSW"
                 stat str
@@ -775,18 +654,8 @@ HollowSkull {
 }
 
 TunaCan { 
-    intro {
-        title "EVENT_TUNACAN_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame tuna_can
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_TUNACAN_QUES"
-
-        options {
+        options.overwrite {
             open {
                 label "EVENT_OPEN_ANSW"
                 stat lck
@@ -824,18 +693,8 @@ TunaCan {
 }
 
 AFewCoins {
-    intro {
-        title "EVENT_AFEWCOINS_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame a_few_coins
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_AFEWCOINS_QUES"
-
-        options {
+        options.overwrite {
             take {
                 label "EVENT_TAKE_ANSW"
                 stat lck
@@ -889,18 +748,8 @@ AFewCoins {
 }
 
 APuzzleBox {
-    intro {
-        title "EVENT_APUZZLEBOX_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame a_puzzle_box
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_APUZZLEBOX_QUES"
-
-        options {
+        options.overwrite {
             examine {
                 label "EVENT_EXAMINE_ANSW"
                 stat int
@@ -936,18 +785,8 @@ APuzzleBox {
 }
 
 TimeCapsule {
-    intro {
-        title "EVENT_TIMECAPSULE_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame time_capsule
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_TIMECAPSULE_QUES"
-
-        options {
+        options.overwrite {
             smash {
                 label "EVENT_SMASH_ANSW"
                 stat str
@@ -1164,18 +1003,8 @@ TimeCapsule {
 }
 
 Locket {
-    intro {
-        title "EVENT_LOCKET_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame locket
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_LOCKET_QUES"
-
-        options {
+        options.overwrite {
             open {
                 label "EVENT_OPEN_ANSW"
                 stat lck
@@ -1231,18 +1060,8 @@ Locket {
 }
 
 WeirdEgg {
-    intro {
-        title "EVENT_WEIRDEGG_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame weird_egg
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_WEIRDEGG_QUES"
-
-        options {
+        options.overwrite {
             smash {
                 label "EVENT_SMASH_ANSW"
                 stat str
@@ -1299,18 +1118,8 @@ WeirdEgg {
 }
 
 RacyMagazine {
-    intro {
-        title "EVENT_RACYMAGAZINE_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame racy_magazine
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_RACYMAGAZINE_QUES"
-
-        options {
+        options.overwrite {
             open {
                 label "EVENT_OPEN_ANSW"
                 stat lck
@@ -1359,18 +1168,8 @@ RacyMagazine {
 }
 
 PillBottle {
-    intro {
-        title "EVENT_PILLBOTTLE_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame pill_bottle
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_PILLBOTTLE_QUES"
-
-        options {
+        options.overwrite {
             open {
                 label "EVENT_OPEN_ANSW"
                 stat lck
@@ -1491,18 +1290,8 @@ PillBottle {
 }
 
 Coffin {
-    intro {
-        title "EVENT_COFFIN_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame coffin
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_COFFIN_QUES"
-
-        options {
+        options.overwrite {
             bash {
                 label "EVENT_BASH_ANSW"
                 stat str
@@ -1560,18 +1349,8 @@ Coffin {
 }
 
 Clam {
-    intro {
-        title "EVENT_CLAM_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame clam
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_CLAM_QUES"
-
-        options {
+        options.overwrite {
             lick {
                 label "EVENT_KISS_ANSW"
                 stat cha
@@ -1630,18 +1409,8 @@ Clam {
 }
 
 GratingInTheFloor {
-    intro {
-        title "EVENT_GRATINGINTHEFLOOR_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame grating_in_the_floor
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_GRATINGINTHEFLOOR_QUES"
-
-        options {
+        options.overwrite {
             bash {
                 label "EVENT_BASH_ANSW"
                 stat str
@@ -1696,18 +1465,8 @@ GratingInTheFloor {
 }
 
 BrokenTV {
-    intro {
-        title "EVENT_BROKENTV_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame broken_tv
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_BROKENTV_QUES"
-
-        options {
+        options.overwrite {
             smash {
                 label "EVENT_SMASH_ANSW"
                 stat str

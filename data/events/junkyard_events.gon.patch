@@ -1,16 +1,6 @@
 LockedTrunk {
-    intro {
-        title "EVENT_LOCKEDTRUNK_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame locked_trunk
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_LOCKEDTRUNK_QUES"
-
-        options {
+        options.overwrite {
             open {
                 label "EVENT_OPEN_ANSW"
                 stat lck
@@ -26,8 +16,8 @@ LockedTrunk {
                             set_frame 3
                             prompt "EVENT_LOCKEDTRUNK_REW2"
                             gain_coins [10 20]
-							get_item_from_pool junkyard_items
-							get_item_from_pool junkyard_items
+                            get_item_from_pool junkyard_items
+                            get_item_from_pool junkyard_items
                         }
                     }
                 }
@@ -59,18 +49,8 @@ LockedTrunk {
 }
 
 BarbedWireFence {
-    intro {
-        title "EVENT_BARBEDWIREFENCE_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame barbed_wire_fence
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_BARBEDWIREFENCE_QUES"
-
-        options {
+        options.overwrite {
             cut_wires {
                 label "EVENT_CUTWIRES_ANSW"
                 stat int
@@ -122,18 +102,8 @@ BarbedWireFence {
 }
 
 TrashBags {
-    intro {
-        title "EVENT_TRASHBAGS_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame trash_bags
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_TRASHBAGS_QUES"
-
-        options {
+        options.overwrite {
             eat {
                 label "EVENT_EAT_ANSW"
                 stat con
@@ -204,22 +174,8 @@ TrashBags {
 }
 
 HeadInATire {
-    requirements {
-        not_has_token WorldEventLegacyToken_HeadInTireCompleted
-    }
-
-    intro {
-        title "EVENT_HEADINATIRE_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame head_in_a_tire
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_HEADINATIRE_QUES"
-
-        options {
+        options.overwrite {
             kiss {
                 label "EVENT_KISS_ANSW"
                 stat cha
@@ -285,18 +241,8 @@ HeadInATire {
 }
 
 BoxWithAHole {
-    intro {
-        title "EVENT_BOXWITHAHOLE_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame box_with_a_hole
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_BOXWITHAHOLE_QUES"
-
-        options {
+        options.overwrite {
             leg {
                 label "EVENT_LEGINSIDE_ANSW"
                 stat lck
@@ -385,74 +331,8 @@ BoxWithAHole {
 }
 
 StartDigging {
-    intro {
-        title "EVENT_STARTDIGGING_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame start_digging
-        event_clip NonWheelEvent
-    }
-
     main {
-        setup {
-            conditional_reward {
-                requirements {
-                    not_has_token WorldEventLegacyToken_StartDigging
-                }
-                reward {
-                    prompt "EVENT_STARTDIGGING_QUES"
-                }
-            }
-            conditional_reward {
-                requirements {
-                    counter_range [WorldEventLegacyToken_StartDigging 1 3]
-                }
-                reward {
-                    prompt "EVENT_STARTDIGGING_QUES2"
-                }
-            }
-            conditional_reward {
-                requirements {
-                    counter_range [WorldEventLegacyToken_StartDigging 1 1]
-                }
-
-                reward {
-                    set_frame 2
-                }
-            }
-            conditional_reward {
-                requirements {
-                    counter_range [WorldEventLegacyToken_StartDigging 2 2]
-                }
-
-                reward {
-                    set_frame 3
-                }
-            }
-            
-            conditional_reward {
-                requirements {
-                    counter_range [WorldEventLegacyToken_StartDigging 3 3]
-                }
-
-                reward {
-                    set_frame 4
-                }
-            }
-
-            conditional_reward {
-                requirements {
-                    counter_minimum [WorldEventLegacyToken_StartDigging 4]
-                }
-
-                reward {
-                    set_frame 5
-                    prompt "EVENT_STARTDIGGING_QUES3"
-                }
-            }
-        }
-
-        options {
+        options.overwrite {
             dig {
                 label "EVENT_DIG_ANSW"
                 stat str
@@ -474,7 +354,7 @@ StartDigging {
                             increment_legacy_counter WorldEventLegacyToken_StartDigging
                             increment_legacy_counter WorldEventLegacyToken_StartDigging
                             learn_passive DirtyClaws
-							    permanent_stats {
+                            permanent_stats {
                                 str 2
                             }
                         }

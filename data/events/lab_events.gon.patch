@@ -1,27 +1,6 @@
 Needles {
-    intro {
-        title "EVENT_NEEDLES_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame needles
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_NEEDLES_QUES"
-
-        setup {
-            conditional_reward {
-                requirements {
-                    has_token AdventureToken_HasTakenNeedle
-                }
-                reward {
-                    prompt EVENT_NEEDLES_AGAIN_QUES
-                }
-            }
-        }
-
-        options {
+        options.overwrite {
             red_needle {
                 label "EVENT_NEEDLES_RED_ANSW"
                 stat lck
@@ -268,32 +247,8 @@ Needles {
 }
 
 MysteriousJar {
-    intro {
-        title "EVENT_MYSTERIOUSJAR_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame mysterious_jar
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_MYSTERIOUSJAR_QUES"
-        
-        setup {
-            conditional_reward {
-                requirements {
-                    not_has_token AdventureToken_MysteriousJarRepeat
-                }
-                reward {
-                    prompt "EVENT_MYSTERIOUSJAR_QUES"
-                }
-                else {
-                    prompt "EVENT_MYSTERIOUSJAR_QUES2"
-                }
-            }
-        }
-
-        options {
+        options.overwrite {
             free {
                 label "EVENT_FREE_ANSW"
                 stat lck
@@ -355,27 +310,6 @@ MysteriousJar {
                         }
                     }
                 }
-                bad {
-                    set_frame 3
-                    reward {
-                        common {
-                            prompt "EVENT_MYSTERIOUSJAR_REW3"
-                            self_status_next_fight {
-                                Poison 1
-                                Bleed 1
-                                Bruise 1
-                            }
-                        }
-                        rare {
-                            prompt "EVENT_MYSTERIOUSJAR_REW4" 
-                            spawn_unit_next_fight {
-                                object [SnakeyBones HornyCat GunCat ScorpionCat Mangy2 BabyDeathWorm]
-                                count 1
-                                spawn_side enemies
-                            }
-                        }
-                    }
-                }
             }
 
             ignore {
@@ -400,37 +334,14 @@ MysteriousJar {
                         }
                     }
                 }
-                bad {
-                    reward {
-                        common {
-                            prompt "EVENT_MYSTERIOUSJAR_REW7"
-                            play_animation [resultLeave 0]
-                            //nothing
-                        }
-                        rare {
-                            prompt "EVENT_MYSTERIOUSJAR_REW8" 
-                            gain_disorder Depression
-                        }
-                    }
-                }
             }
         }
     }
 }
 
 OddDevice {
-    intro {
-        title "EVENT_ODDDEVICE_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame odd_device
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_ODDDEVICE_QUES"
-
-        options {
+        options.overwrite {
             push_buttons {
                 label "EVENT_ODDDEVICE_PUSHBUTTONS_ANSW"
 
@@ -444,20 +355,6 @@ OddDevice {
                         rare {
                             prompt "EVENT_ODDDEVICE_REW2"
                             random_mutation 2
-                        }
-                    }
-                }
-                bad {
-                    set_frame 3
-                    reward {
-                        common {
-                            prompt "EVENT_ODDDEVICE_REW3"
-                            injury random
-                        }
-                        rare {
-                            prompt "EVENT_ODDDEVICE_REW4" 
-                            injury random
-                            injury random
                         }
                     }
                 }
@@ -476,20 +373,6 @@ OddDevice {
                         rare {
                             prompt "EVENT_ODDDEVICE_REW6"
                             learn_passive_from_pool AnyUnlocked
-                        }
-                    }
-                }
-                bad {
-                    set_frame 5
-                    reward {
-                        common {
-                            prompt "EVENT_ODDDEVICE_REW7"
-                            gain_disorder_from_pool all_disorders
-                        }
-                        rare {
-                            prompt "EVENT_ODDDEVICE_REW8" 
-                            gain_disorder_from_pool all_disorders
-                            gain_disorder_from_pool all_disorders
                         }
                     }
                 }

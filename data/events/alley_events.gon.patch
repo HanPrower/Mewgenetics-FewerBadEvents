@@ -1,20 +1,7 @@
-TrashBin { //originally in treasure_box.gon
-    intro {
-        title "EVENT_TRASHBIN_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame trashcan
-        event_clip NonWheelEvent
-    }
-
+TrashBin {
     main {
-        prompt "EVENT_TRASHBIN_QUES"
-
-        options {
+        options.overwrite {
             examine {
-                label "EVENT_EXAMINE_ANSW"
-                stat int
-
                 good {
                     prompt "EVENT_TRASHBIN_REW1"
                     set_frame 2
@@ -88,19 +75,9 @@ TrashBin { //originally in treasure_box.gon
     }
 }
 
-ClosedWindow { //moved from misc_events.gon
-    intro {
-        title "EVENT_CLOSEDWINDOW_NAME"
-        cat_choice random //choose, random, none (random and none are equivalent)
-        subject_clip EventSubject
-        subject_frame brokenwindow
-        event_clip NonWheelEvent
-    }
-
+ClosedWindow {
     main {
-        prompt "EVENT_CLOSEDWINDOW_QUES"
-
-        options {
+        options.overwrite {
             bash {
                 label "EVENT_BASH_ANSW"
                 stat str
@@ -158,18 +135,8 @@ ClosedWindow { //moved from misc_events.gon
 }
 
 MouseNest {
-    intro {
-        title "EVENT_MOUSENEST_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame mouse_nest
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_MOUSENEST_QUES"
-
-        options {
+        options.overwrite {
             charm {
                 label "EVENT_CHARM_ANSW"
                 stat cha
@@ -222,18 +189,8 @@ MouseNest {
 }
 
 WallOfCats {
-    intro {
-        title "EVENT_WALLOFCATS_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame wall_of_cats
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_WALLOFCATS_QUES"
-
-        options {
+        options.overwrite {
             loot {
                 label "EVENT_LOOT_ANSW"
                 stat dex
@@ -317,22 +274,8 @@ WallOfCats {
 }
 
 KnifeInTheWall {
-    requirements {
-        not_has_token WorldEventLegacyToken_MomsKnife
-    }
-
-    intro {
-        title "EVENT_KNIFEINTHEWALL_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame knife_in_the_wall
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_KNIFEINTHEWALL_QUES"
-
-        options {
+        options.overwrite {
             pull {
                 label "EVENT_PULLKNIFE_ANSW"
                 stat str

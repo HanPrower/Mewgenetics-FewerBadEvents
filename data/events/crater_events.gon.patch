@@ -1,16 +1,6 @@
 PitOfSnakes {
-    intro {
-        title "EVENT_PITOFSNAKES_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame pit_of_snakes
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_PITOFSNAKES_QUES"
-
-        options {
+        options.overwrite {
             fight {
                 label "EVENT_FIGHT_ANSW"
                 stat str
@@ -76,18 +66,8 @@ PitOfSnakes {
 }
 
 Meteor {
-    intro {
-        title "EVENT_METEOR_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame meteor
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_METEOR_QUES"
-
-        options {
+        options.overwrite {
             take {
                 label "EVENT_TAKE_ANSW"
                 stat lck
@@ -143,18 +123,8 @@ Meteor {
 }
 
 MysteriousCrater {
-    intro {
-        title "EVENT_MYSTERIOUSCRATER_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame mysterious_crater
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_MYSTERIOUSCRATER_QUES"
-
-        options {
+        options.overwrite {
             enter_crater {
                 label "EVENT_MYSTERIOUSCRATER_ENTER_ANSW"
                 stat lck

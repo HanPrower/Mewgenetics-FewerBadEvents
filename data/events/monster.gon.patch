@@ -1,16 +1,6 @@
 RatMob {
-    intro {
-        title "EVENT_MOBOFRATS_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame ratmob
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_MOBOFRATS_QUES"
-
-        options {
+        options.overwrite {
             fight {
                 label EVENT_FIGHT_ANSW
                 stat str
@@ -31,7 +21,7 @@ RatMob {
                             }
                         }
                         rare {
-						    prompt "EVENT_MOBOFRATS_REW2"
+                             prompt "EVENT_MOBOFRATS_REW2"
                             get_item_from_pool rat_trinkets
                         }
                     }
@@ -50,7 +40,7 @@ RatMob {
                             gain_familiar CharmedRat
                         }
                         rare {
-						    prompt "EVENT_MOBOFRATS_REW6"
+                            prompt "EVENT_MOBOFRATS_REW6"
                             random_mutation_from_set {
                                 tail 1500
                                 ears 1500
@@ -75,46 +65,8 @@ RatMob {
 }
 
 StrayCat {
-    intro {
-        title "EVENT_STRAYCAT_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame straycat
-        event_clip NonWheelEvent
-    }
-
     main {
-
-        setup {
-            conditional_reward {
-                requirements {
-                    is_not_chapter [iceage jurassic]
-                }
-                reward {
-                    prompt "EVENT_STRAYCAT_QUES"
-                }
-            }
-            
-            conditional_reward {
-                requirements {
-                    is_chapter [jurassic]
-                }
-                reward {
-                    prompt "EVENT_STRAYCAT_ALT_JURASSIC_QUES"
-                }
-            }
-
-            conditional_reward {
-                requirements {
-                    is_chapter [iceage]
-                }
-                reward {
-                    prompt "EVENT_STRAYCAT_ALT_ICEAGE_QUES"
-                }
-            }
-        }
-
-        options {
+        options.overwrite {
             fight {
                 label EVENT_FIGHT_ANSW
                 stat str
@@ -131,7 +83,7 @@ StrayCat {
                             get_item_from_pool [FoodMedium FoodBig Catnip CatnipBig]
                         }
                         rare {
-						    prompt "EVENT_STRAYCAT_REW2"
+                            prompt "EVENT_STRAYCAT_REW2"
                             get_item_from_pool deadcat_equipment
                         }
                     }
@@ -154,7 +106,7 @@ StrayCat {
                             gain_familiar CharmedKitten
                         }
                         rare {
-						    prompt "EVENT_STRAYCAT_REW6"
+                             prompt "EVENT_STRAYCAT_REW6"
                             gain_cat_familiar 1
                         }
                     }
@@ -241,18 +193,8 @@ StrayCat {
 }
 
 BoxMonster {
-    intro {
-        title "EVENT_BOXMONSTER_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame boxmonster
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_BOXMONSTER_QUES"
-
-        options {
+        options.overwrite {
             bribe {
                 label EVENT_BRIBE_ANSW
                 stat con
@@ -265,7 +207,7 @@ BoxMonster {
                             self_damage [5 10]
                         }
                         rare {
-						    prompt "EVENT_BOXMONSTER_REW2"
+                            prompt "EVENT_BOXMONSTER_REW2"
                             full_heal 1
                             gain_disorder Touched
                             self_damage 1
@@ -288,18 +230,8 @@ BoxMonster {
 }
 
 BallOfFlesh {
-    intro {
-        title "EVENT_BALLOFFLESH_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame ballofflesh
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_BALLOFFLESH_QUES"
-
-        options {
+        options.overwrite {
             eat {
                 label EVENT_EAT_ANSW
                 stat con
@@ -313,7 +245,7 @@ BallOfFlesh {
                             gain_food [6 15]
                         }
                         rare {
-						    prompt "EVENT_BALLOFFLESH_REW2"
+                            prompt "EVENT_BALLOFFLESH_REW2"
                             get_item BoneMarrow
                         }
                     }
@@ -334,18 +266,8 @@ BallOfFlesh {
 }
 
 SpookieApparation {
-    intro {
-        title "EVENT_SPOOKYAPPARATION_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame spookieapparation
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_SPOOKYAPPARATION_QUES"
-
-        options {
+        options.overwrite {
             sneak {
                 label EVENT_RUN_ANSW
                 stat spd
@@ -379,18 +301,8 @@ SpookieApparation {
 }
 
 WatchingHead {
-    intro {
-        title "EVENT_WATCHINGHEAD_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame watching_head
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_WATCHINGHEAD_QUES"
-
-        options {
+        options.overwrite {
             fight {
                 label "EVENT_FIGHT_ANSW"
                 stat str

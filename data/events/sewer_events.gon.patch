@@ -1,16 +1,6 @@
 CloggedPipes {
-    intro {
-        title "EVENT_CLOGGEDPIPES_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame clogged_pipes
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_CLOGGEDPIPES_QUES"
-
-        options {
+        options.overwrite {
             examine {
                 label "EVENT_EXAMINE_ANSW"
                 stat int
@@ -59,18 +49,8 @@ CloggedPipes {
 }
 
 ShinyThingInAPool {
-    intro {
-        title "EVENT_SHINYTHINGINAPOOL_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame shiny_thing_in_pool
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_SHINYTHINGINAPOOL_QUES"
-
-        options {
+        options.overwrite {
             dive {
                 label "EVENT_DIVE_ANSW"
                 stat dex
@@ -107,7 +87,7 @@ ShinyThingInAPool {
                         rare {
                             prompt "EVENT_SHINYTHINGINAPOOL_REW6"
                             get_item_from_pool {
-								pool current_chapter_rare
+                                pool current_chapter_rare
                                 pool current_chapter_rare //TODO: Gain unique item? maybe a skeleton key that you can use to unlock other locked events?
                             }
                         }
@@ -119,18 +99,8 @@ ShinyThingInAPool {
 }
 
 UseTheToilet {
-    intro {
-        title "EVENT_USETHETOILET_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame use_the_toilet
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_USETHETOILET_QUES"
-
-        options {
+        options.overwrite {
             use_toilet_con {
                 label "EVENT_USETOILET_ANSW"
                 stat con
@@ -197,18 +167,8 @@ UseTheToilet {
 }
 
 BrokenCanister {
-    intro {
-        title "EVENT_BROKENCANISTER_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame broken_canister
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_BROKENCANISTER_QUES"
-
-        options {
+        options.overwrite {
             inspect {
                 label "EVENT_INSPECT_ANSW"
                 stat int
@@ -258,18 +218,8 @@ BrokenCanister {
 }
 
 GiantSleepingShark {
-    intro {
-        title "EVENT_GIANTSLEEPINGSHARK_NAME"
-        cat_choice random
-        subject_clip EventSubject
-        subject_frame giant_sleeping_shark
-        event_clip NonWheelEvent
-    }
-
     main {
-        prompt "EVENT_GIANTSLEEPINGSHARK_QUES"
-
-        options {
+        options.overwrite {
             sneak_by {
                 label "EVENT_SNEAKBY_ANSW"
                 stat dex
